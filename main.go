@@ -16,6 +16,7 @@ func main() {
 
 	app.Use(recover.New())
 	app.Use(logger.New())
+	app.Use(iris.Cache(1 * time.Minute))
 
 	mvc.New(app).Handle(new(controller.IndexController))
 
