@@ -1,7 +1,7 @@
 package repo
 
 import (
-	"bison/model"
+	"billy/model"
 	"sync"
 )
 
@@ -22,6 +22,7 @@ type userQueryRepo struct {
 }
 
 func (r *userQueryRepo) GetByUsername(username string) model.User {
+
 	return model.User{}
 }
 

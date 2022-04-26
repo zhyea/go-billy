@@ -1,4 +1,4 @@
-module bison
+module billy
 
 go 1.16
 
