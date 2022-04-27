@@ -1,6 +1,6 @@
 # go-billy
 
-（前进，Billy）
+奔跑吧，Billy ！
 
 使用GoLang Iris框架重新实现下bison项目
 
