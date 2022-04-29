@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bison/web/controller"
+	"billy/web/controller"
 	"context"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/logger"
@@ -33,9 +33,13 @@ func main() {
 		_ = app.Shutdown(ctx)
 	})
 
-	app.RegisterView(iris.HTML("./web/view", ".html"))
+	htmlEngine := iris.HTML("./web/template", ".html")
+	// 开发模式下开启重载
+	htmlEngine.Reload(true)
 
-	_ = app.Run(iris.Addr(":8080"), iris.WithoutInterruptHandler, iris.WithConfiguration(iris.YAML("./configs/app.yml")))
+	app.RegisterView(htmlEngine)
+
+	_ = app.Run(iris.Addr(":8080"), iris.WithoutInterruptHandler, iris.WithConfiguration(iris.YAML("./resources/app.yml")))
 }
 
 // onShutDown
