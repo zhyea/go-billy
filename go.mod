@@ -26,5 +26,6 @@ require (
 	github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 // indirect
 	github.com/zhyea/vibe v0.0.5
 	gopkg.in/ini.v1 v1.57.0 // indirect
+	gorm.io/driver/mysql v1.3.3
 	gorm.io/gorm v1.23.4
 )

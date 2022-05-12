@@ -2,30 +2,39 @@ package repo
 
 import (
 	"billy/model"
-	"sync"
 )
 
-// UserRepo 用户方法
-type UserRepo interface {
-
-	// GetByUsername 根据用户名查询用户信息
-	GetByUsername(username string) model.User
-
-	// CheckAndGet 检查用户密码并获取登录信息
-	CheckAndGet(username string, password string) model.User
+// UserRepo 用户信息载体
+type UserRepo struct {
 }
 
-// userQueryRepo 用户信息载体
-type userQueryRepo struct {
-	source map[int64]model.User
-	mu     sync.RWMutex
+// Insert 新增用户记录
+func (r *UserRepo) Insert(user *model.User) {
+	db.Create(user)
 }
 
-func (r *userQueryRepo) GetByUsername(username string) model.User {
-
-	return model.User{}
+// Update 更新用户记录
+func (r *UserRepo) Update(user *model.User) {
+	db.Model(user).Updates(user)
 }
 
-func (r *userQueryRepo) CheckAndGet(username string, password string) model.User {
-	return model.User{}
+// GetById 根据ID查询用户信息
+func (r *UserRepo) GetById(id int64) model.User {
+	var user model.User
+	db.Last(&user, id)
+	return user
+}
+
+// GetByUsername 根据用户名查询用户信息
+func (r *UserRepo) GetByUsername(username string) *model.User {
+	var user model.User
+	db.Last(&user, "username=?", username)
+	return &user
+}
+
+// CheckAndGet 检查用户密码并获取登录信息
+func (r *UserRepo) CheckAndGet(username string, password string) *model.User {
+	var user model.User
+	db.Last(&user, "username=? and password=?", username, password)
+	return &user
 }

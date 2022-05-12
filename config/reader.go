@@ -31,3 +31,8 @@ func ServerPort() int {
 	}
 	return config.server.port
 }
+
+// GetDbConfig 获取数据库连接信息
+func GetDbConfig() Database {
+	return config.database
+}

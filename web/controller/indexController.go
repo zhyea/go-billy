@@ -4,7 +4,7 @@ import "github.com/kataras/iris/v12/mvc"
 
 type IndexController struct{}
 
-func (c *IndexController) BeforeActivation(b mvc.BeforeActivation) {
+/*func (c *IndexController) BeforeActivation(b mvc.BeforeActivation) {
 	// b.Dependencies().Add/Remove
 	// b.Router().Use/UseGlobal/Done // 和你已知的任何标准 API  调用
 
@@ -13,7 +13,7 @@ func (c *IndexController) BeforeActivation(b mvc.BeforeActivation) {
 	// 3-> 控制器函数的名称将被解析未一个处理程序 [ handler ]
 	// 4-> 任何应该在 MyCustomHandler 之前运行的处理程序[ handlers ]
 	b.Handle("GET", "/something/{id:long}", "IndexController")
-}
+}*/
 
 // Get index
 func (c *IndexController) Get() mvc.Result {
@@ -30,5 +30,12 @@ func (c *IndexController) GetPing() string {
 
 // GetHello hello
 func (c *IndexController) GetHello() interface{} {
-	return map[string]string{"message": "Hello World!"}
+	view := mvc.View{
+		Name: "hello.html",
+		Data: map[string]interface{}{
+			"Title":     "Hello Page",
+			"MyMessage": "Welcome to my awesome website",
+		},
+	}
+	return view
 }
