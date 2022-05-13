@@ -8,6 +8,10 @@ import (
 type UserRepo struct {
 }
 
+func NewUserRepo() UserRepo {
+	return UserRepo{}
+}
+
 // Insert 新增用户记录
 func (r *UserRepo) Insert(user *model.User) {
 	db.Create(user)
@@ -19,10 +23,10 @@ func (r *UserRepo) Update(user *model.User) {
 }
 
 // GetById 根据ID查询用户信息
-func (r *UserRepo) GetById(id int64) model.User {
+func (r *UserRepo) GetById(id int64) *model.User {
 	var user model.User
 	db.Last(&user, id)
-	return user
+	return &user
 }
 
 // GetByUsername 根据用户名查询用户信息

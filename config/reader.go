@@ -21,7 +21,7 @@ func init() {
 
 // IsProd 是否生产模式
 func IsProd() bool {
-	return modeProd == config.mode
+	return "modeProd" == config.mode
 }
 
 // ServerPort 获取服务端口

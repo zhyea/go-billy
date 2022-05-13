@@ -21,7 +21,7 @@ func init() {
 	}), &gorm.Config{})
 
 	if nil != err {
-		panic("mysql connect error:" + err.Error())
+		panic("mysql connect failed, " + err.Error())
 	}
 
 	sqlDb, err := db.DB()

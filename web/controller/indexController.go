@@ -1,8 +1,11 @@
 package controller
 
-import "github.com/kataras/iris/v12/mvc"
+import (
+	"github.com/kataras/iris/v12/mvc"
+)
 
-type IndexController struct{}
+type IndexController struct {
+}
 
 /*func (c *IndexController) BeforeActivation(b mvc.BeforeActivation) {
 	// b.Dependencies().Add/Remove

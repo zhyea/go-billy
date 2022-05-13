@@ -9,7 +9,7 @@ type appConf struct {
 	// server 服务相关信息
 	server server
 
-	// database 数据库连接信息
+	// database 数据库连接
 	database Database
 }
 

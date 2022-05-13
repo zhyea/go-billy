@@ -5,7 +5,8 @@ server:
   port: 8080
 #
 database:
-  dsn: username:password@tcp(host:port)/dbName?charset=utf8&parseTime=True&loc=Local
+  # dsn: username:password@tcp(host:port)/dbName?charset=utf8&parseTime=True&loc=Local
+  dsn: root:root@tcp(localhost:3306)/calf?charset=utf8&parseTime=True&loc=Local
   timeout: 10s
   maxOpen: 24
   maxIdle: 12

@@ -6,6 +6,7 @@ import (
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/logger"
 	"github.com/kataras/iris/v12/middleware/recover"
+	"github.com/kataras/iris/v12/mvc"
 	"time"
 )
 
@@ -30,7 +31,7 @@ func main() {
 	})
 
 	// 初始化路由
-	routes.InitRouter(app)
+	mvc.Configure(app, routes.InitRouter)
 	// 配置html引擎
 	htmlEngine := iris.HTML("./web/template", ".html")
 	// 开发模式下开启重载
