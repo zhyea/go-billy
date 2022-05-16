@@ -1,8 +1,10 @@
 package main
 
 import (
+	"billy/config"
 	"billy/web/routes"
 	"context"
+	"fmt"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/logger"
 	"github.com/kataras/iris/v12/middleware/recover"
@@ -34,12 +36,15 @@ func main() {
 	mvc.Configure(app, routes.InitRouter)
 	// 配置html引擎
 	htmlEngine := iris.HTML("./web/template", ".html")
-	// 开发模式下开启重载
-	htmlEngine.Reload(true)
+
+	if config.IsDevMode() {
+		// 开发模式下开启重载
+		htmlEngine.Reload(true)
+	}
 
 	app.RegisterView(htmlEngine)
 
-	_ = app.Run(iris.Addr(":8080"), iris.WithoutInterruptHandler, iris.WithOptimizations)
+	_ = app.Run(iris.Addr(fmt.Sprintf(":%d", config.Port())), iris.WithoutInterruptHandler, iris.WithOptimizations)
 }
 
 // onShutDown

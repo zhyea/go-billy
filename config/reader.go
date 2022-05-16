@@ -5,34 +5,37 @@ import (
 	"log"
 )
 
-var config = new(appConf)
+var Config = new(AppConf)
 
 //
 // init 初始化
 func init() {
 	vibe.AddConfigFiles("resources/app.yml")
 	if err := vibe.ReadConfig(); nil != err {
-		log.Fatalf("Load config file app.yml failed: %v\n", err)
+		log.Fatalf("Load Config file app.yml failed: %v\n", err)
 	}
-	if err := vibe.Unmarshal(config); nil != err {
-		log.Fatalf("Render config instance failed: %v\n", err)
+	if err := vibe.Unmarshal(Config); nil != err {
+		log.Fatalf("Render Config instance failed: %v\n", err)
 	}
 }
 
-// IsProd 是否生产模式
-func IsProd() bool {
-	return "modeProd" == config.mode
+//
+// IsDevMode 是否生产模式
+func IsDevMode() bool {
+	return ModeDev == Config.Mode
 }
 
-// ServerPort 获取服务端口
-func ServerPort() int {
-	if (server{} == config.server || config.server.port <= 0) {
+//
+// Port 服务端口
+func Port() int {
+	if (Server{} == Config.Server || Config.Server.Port <= 0) {
 		return 8080
 	}
-	return config.server.port
+	return Config.Server.Port
 }
 
+//
 // GetDbConfig 获取数据库连接信息
 func GetDbConfig() Database {
-	return config.database
+	return Config.Database
 }

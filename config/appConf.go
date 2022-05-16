@@ -1,35 +1,41 @@
 package config
 
-// appConf 应用配置
-type appConf struct {
+//
+// AppConf 应用配置
+type AppConf struct {
 
-	// mode 应用模式
-	mode appMode
+	// Mode 应用模式
+	Mode AppMode
 
-	// server 服务相关信息
-	server server
+	// Server 服务相关信息
+	Server Server
 
-	// database 数据库连接
-	database Database
+	// Database 数据库连接
+	Database Database
 }
 
-// appMode 应用模式
-type appMode string
+//
+// AppMode 应用模式
+type AppMode string
 
 const (
-	// modeDev 开发模式
-	modeDev appMode = "dev"
 
-	// modeProd 生产模式
-	modeProd appMode = "prod"
+	// ModeDev 开发模式
+	ModeDev AppMode = "dev"
+
+	// ModeProd 生产模式
+	ModeProd AppMode = "prod"
 )
 
-// server 服务器配置
-type server struct {
-	// port 应用端口
-	port int
+//
+// Server 服务器配置
+type Server struct {
+
+	// Port 应用端口
+	Port int
 }
 
+//
 // Database 数据库连接配置
 type Database struct {
 
