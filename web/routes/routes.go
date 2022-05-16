@@ -1,11 +1,14 @@
 package routes
 
 import (
+	"billy/service"
 	"billy/web/controller"
 	"github.com/kataras/iris/v12/mvc"
 )
 
-func InitRouter(context *mvc.Application) {
+func InitRouter(app *mvc.Application) {
 	// Index
-	context.Handle(new(controller.IndexController))
+	app.Handle(new(controller.IndexController))
+	// User
+	app.Party("/user").Register(service.NewUserService()).Handle(new(controller.UserController))
 }

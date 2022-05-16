@@ -11,9 +11,9 @@ type UserService struct {
 }
 
 // NewUserService 返回默认的 UserService
-func NewUserService(repo repo.UserRepo) *UserService {
+func NewUserService() *UserService {
 	return &UserService{
-		repo: repo,
+		repo: repo.UserRepo{},
 	}
 }
 

@@ -1,13 +1,10 @@
 package model
 
-import "gorm.io/gorm"
-
 // User 用户信息
 type User struct {
-	gorm.Model
 
 	// Id value
-	Id string `json:"id"`
+	Id string `json:"id" gorm:"primaryKey"`
 
 	// Username 用户名
 	Username string `json:"username"`
