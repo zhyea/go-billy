@@ -1,10 +1,12 @@
 package model
 
+import "time"
+
 // User 用户信息
 type User struct {
 
 	// Id value
-	Id string `json:"id" gorm:"primaryKey"`
+	Id int64 `json:"id" gorm:"primaryKey"`
 
 	// Username 用户名
 	Username string `json:"username"`
@@ -19,5 +21,5 @@ type User struct {
 	Email string `json:"email"`
 
 	// OpTime 操作时间
-	OpTime string `json:"-"`
+	OpTime time.Time `json:"-"`
 }

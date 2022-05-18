@@ -1,0 +1,751 @@
+/* CSS Document */
+/**
+ * @theme: sunny
+ * @author: robin
+ * @url: www.chobit.org
+ */
+/* -------------------------------------- */
+h2, h3, h4, h5, h6 {
+    font-size: 17px;
+}
+
+em {
+    font-family: "仿宋", "宋体", "楷体", "Sans-serif", serif;
+    font-size: 1em;
+    font-style: normal;
+}
+
+body {
+    background: #A8ABA8;
+    font-size: 15px;
+}
+
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8F989C;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1020px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header, .navigator, .notice, .gallery, .main, .footer {
+    background-color: #FFF;
+    width: 100%;
+}
+
+.gallery, .main {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.bi-icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+}
+
+/* -------------- head -------------- */
+.header {
+    min-height: 120px;
+}
+
+/* -------------- navigator -------------- */
+
+.container-fluid {
+    padding: 0 16px !important;
+}
+
+.navigator {
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: 16px;
+}
+
+.navbar-brand img {
+    margin-bottom: 3px;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8 !important;
+    border: 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    line-height: 240%;
+}
+
+.navbar .container-fluid {
+    padding: 0 24px;
+}
+
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background-color: #f8f8f8 !important;
+}
+
+.dropdown-item, .nav-item {
+    font-size: 15px;
+}
+
+.nav-item a:hover {
+    background-color: #2b542c;
+    color: #FFFFFF !important;
+}
+
+.notice {
+    height: 51px;
+    padding: 0 0 0 16px;
+    line-height: 51px;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    margin-bottom: 9px;
+}
+
+.notice .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery {
+    margin-bottom: 9px;
+}
+
+.main {
+    min-height: 480px;
+    margin-bottom: 9px;
+}
+
+/* -------------- index -------------- */
+
+
+.recommend {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.recommend .item {
+    display: block;
+    float: left;
+    width: 145px;
+    margin: 0;
+    padding: 12px 0 12px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.recommend .item:hover {
+    background: #5FB878;
+}
+
+.recommend .item .cover {
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    width: 128px;
+    border: 1px solid #d3d3d3;
+}
+
+
+.recommend .item .remark {
+    margin: 0 auto;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    width: 126px;
+    height: 27px;
+    overflow: hidden;
+    line-height: 200%;
+    font-size: 13px;
+    background-color: #18391A;
+    opacity: 0.6;
+    color: #FFF;
+}
+
+
+.recommend .item:hover .remark {
+    opacity: 1;
+}
+
+.recommend .item .remark a {
+    display: block;
+    color: #FFF !important;
+}
+
+.popular {
+    margin: 0;
+    padding: 0;
+}
+
+.popular .item {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    color: #333;
+    line-height: 300%;
+}
+
+.popular .item:hover {
+    color: #255625;
+    background-color: #eee;
+}
+
+.popular .item .book {
+    width: 65%;
+    float: left;
+    overflow: hidden;
+    border: 0;
+}
+
+.popular .item .book a {
+    display: block;
+    color: #000;
+}
+
+
+.popular .item .book a .tag {
+    font-size: 15px;
+    display: inline;
+}
+
+.popular .item .author {
+    float: right;
+    right: 0;
+    padding-left: 5px;
+    background: transparent;
+    color: #129151;
+    width: 35%;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.popular .item .author a {
+    display: block;
+    color: #129151;
+}
+
+
+.popular .item .author:hover {
+    color: #223333;
+    background-color: #deeeee;
+}
+
+/* ------------------------------------ cat ------------------------------------ */
+.icon-book {
+    margin-left: 3px;
+    width: 21px;
+    height: 21px;
+}
+
+.work-show {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+.work-show .work {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.work-show .cover {
+    float: left;
+    width: 118px;
+    height: 156px;
+    overflow: hidden;
+    border: 1px solid #d1d1d1;
+}
+
+.work-show .brief {
+    padding: 0 0 0 8px;
+    margin-left: 110px;
+    height: 156px;
+    overflow: hidden;
+}
+
+.work-show .brief .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #1d6300;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.work-show .brief .title a {
+    color: #129151;
+}
+
+.work-show .brief .title a:hover {
+    color: #e8434c;
+}
+
+.work-show .brief .author {
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.work-show .brief .author a {
+    color: #5e5e5e;
+}
+
+.work-show .brief .author a:hover {
+    color: #129151;
+}
+
+.work-show .brief .intro {
+    line-height: 160%;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.pagination {
+    padding: 16px 6px;
+}
+
+.pagination a {
+    padding: 6px 8px;
+    margin: 2px;
+    line-height: 100%;
+    border: 1px solid #1d6300;
+    color: #1d6300;
+}
+
+.pagination a:hover {
+    text-decoration: none;
+    background-color: #a5cadc;
+}
+
+.pagination .active {
+    text-decoration: none;
+    background-color: #63a563;
+}
+
+
+/* ------------------------------------ work ------------------------------------ */
+.work-block {
+    margin: 0;
+}
+
+
+.work-header {
+    padding: 12px 15px 5px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.work-header .title {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #1d6300;
+}
+
+.work-header .author {
+    padding-left: 12px;
+}
+
+.work-neck {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 12px 9px;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: baseline;
+    height: auto;
+}
+
+.work-neck .cover {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 9px;
+    z-index: 999;
+    width: 118px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid #d1d1d1;
+}
+
+.work-neck .brief {
+    padding: 0;
+}
+
+.work-neck .brief .intro {
+    margin: 0;
+    padding: 6px 0 0 125px;
+    overflow: hidden;
+    height: 120px;
+    color: #737383;
+    line-height: 180%;
+    text-indent: 2em;
+}
+
+.work-neck .brief .relate {
+    height: 24px;
+    padding: 8px 16px 0 125px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.work-neck .brief .icon-tags {
+    width: 16px;
+    height: 16px;
+}
+
+.work-neck .brief .relate a {
+    margin-right: 12px;
+    color: #7d7d7d;
+}
+
+.work-body {
+    margin-top: 6px;
+    padding: 0 15px;
+}
+
+
+.work-body .volume {
+    margin-top: 9px;
+    padding: 12px 12px 10px;
+    text-align: left;
+    font: 16px Arial;
+    color: #1d6300;
+    border-bottom: 1px solid #129151;
+}
+
+.work-body .chapter {
+    padding: 6px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 189%;
+    border-bottom: 1px dashed #e2e2e2;
+}
+
+.work-body .chapter:hover {
+    background-color: #c9e2b3;
+}
+
+.work-body .chapter a {
+    display: block;
+    color: #333;
+}
+
+.work-body .chapter a:hover {
+    color: #1d6300;
+}
+
+/* ------------------------------------ chapter ------------------------------------ */
+.chapter .row {
+    display: block;
+}
+
+
+.readerTools {
+    overflow: hidden;
+    margin: 0;
+    padding-top: 10px;
+    height: 48px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+
+#contentContainer {
+    margin: 0;
+    padding-bottom: 18px;
+}
+
+.chapter-name {
+    margin: 0;
+    padding: 9px 0 6px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 240%;
+    color: #129151;
+    text-align: center;
+    border-bottom: 1px dotted #ddd;
+}
+
+.chapter-nav {
+    position: relative;
+    margin: 0;
+    font-size: 12px;
+    line-height: 42px;
+    text-align: center;
+    border-bottom: 1px dotted #ddd;
+}
+
+.chapter-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #129151;
+}
+
+.chapter-author {
+    display: block;
+    width: 25%;
+    float: right;
+    overflow: hidden;
+    text-align: right;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+}
+
+.chapter-content {
+    margin: 0;
+    padding: 24px 16px;
+    min-height: 90px;
+    line-height: 210%;
+    border-bottom: 1px dotted #ddd;
+}
+
+.chapter-content p {
+    text-indent: 2em;
+}
+
+/* -------------- foot -------------- */
+
+.footer {
+    margin-bottom: 12px;
+    border-top: 1px solid #ddd;
+    padding: 21px 24px 0;
+    min-height: 96px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.footer .copyright {
+    margin-top: 9px;
+    width: 100%;
+    line-height: 180%;
+    color: #8F989C;
+    font-size: 15px;
+}
+
+
+.footer .copyright a, .footer .copyright a:hover {
+    color: #8F989C;
+    text-decoration: none;
+}
+
+
+/* -------------- comment -------------- */
+
+.comment-form {
+    display: block;
+    background-color: #85D87B;
+    margin: 36px 0 0 0;
+    padding: 36px 3px 16px;
+}
+
+.comment-form form {
+    padding: 0;
+}
+
+.comment-form .comment-user, .comment-form .comment-content, .comment-form .comment-sub {
+    margin: 0;
+    padding: 0;
+}
+
+.comment-form textarea, .comment-form input {
+    width: 100%;
+    border: 1px solid #888;
+    margin: 0;
+    line-height: 100%;
+    outline: none;
+}
+
+.comment-form input, .comment-form button {
+    height: 36px
+}
+
+.comment-form .comment-user {
+    display: inline;
+}
+
+.comment-form .comment-sub {
+    float: right;
+    width: 48px;
+    text-align: right;
+}
+
+.comment-form .comment-sub .btn {
+    width: 90px;
+}
+
+.comment-form .comment-user input {
+    width: 80%;
+}
+
+.comments {
+    display: block;
+    margin: 0;
+    padding: 10px 6px;
+    border-top: 1px solid #D9D9D9;
+}
+
+.comments .comment-user {
+    display: block;
+    width: 36px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.comments .comment-user .comment-icon {
+    margin: 0;
+    padding: 0;
+    border-radius: 50% !important;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #DDD;
+    overflow: hidden;
+}
+
+.comments .comment-content, .comments .comment-name {
+    text-align: left;
+    margin-left: 42px;
+}
+
+.comments .comment-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comments .comment-content {
+    padding: 16px;
+    border-radius: 7px !important;
+    background-color: #A5F89B;
+    font-size: 14px;
+    line-height: 180%;
+}
+
+.comments .comment-content:hover {
+    background-color: #FFF;
+    border: 1px solid #D9D9D9;
+}
+
+/* ------------------------------------  bootstrap  ------------------------------------ */
+
+.page-header {
+    height: 36px;
+    margin: 9px 0 0 0;
+    padding: 6px 0 0 12px;
+    color: #129151;
+    border-bottom: 1px solid #129151;
+    vertical-align: baseline;
+}
+
+.page-header a {
+    color: #129151;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------ multi device ------------------------------------ */
+
+@media screen and (min-width: 160px) {
+    .header, .gallery, #floatPanel, .chapter-author, .readerTools {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+
+    .header, .gallery, .chapter-author, #floatPanel, .readerTools {
+        display: block;
+    }
+
+    /* ------------------------------ 上下移动按钮 ------------------------------ */
+    #floatPanel .ctrlPanel {
+        width: 36px;
+        height: 62px;
+        background: #fff url(../imgs/float-panel-bg.png) no-repeat left top;
+        border: solid 1px #ddd;
+        margin-left: 510px;
+        position: fixed;
+        _position: absolute;
+        bottom: 36px;
+        left: 50%;
+        overflow: hidden;
+        z-index: 10000;
+    }
+
+    #floatPanel .ctrlPanel .arrow {
+        height: 29px;
+        line-height: 28px;
+        display: block;
+        margin: 1px auto;
+    }
+
+    #floatPanel .ctrlPanel .arrow span {
+        display: none;
+    }
+
+    #floatPanel .ctrlPanel .arrow:hover {
+        background: #f4f4f4
+    }
+
+    #floatPanel .ctrlPanel .arrow:hover span {
+        display: block
+    }
+
+    #floatPanel .ctrlPanel a {
+        text-decoration: none;
+        width: 34px;
+        font-size: 12px;
+        color: #f60;
+        letter-spacing: 1px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (min-width: 870px) {
+    .header, .gallery, #floatPanel, .readerTools, .chapter-author {
+        display: block;
+    }
+
+    .content {
+        border-right: 1px solid #CCC;
+        padding-right: 6px;
+    }
+}
+
+
