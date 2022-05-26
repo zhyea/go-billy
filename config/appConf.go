@@ -12,6 +12,9 @@ type AppConf struct {
 
 	// Database 数据库连接
 	Database Database
+
+	// Front 前端相关配置
+	Front Front
 }
 
 //
@@ -50,4 +53,29 @@ type Database struct {
 
 	// MaxIdle 最大空闲连接数
 	MaxIdle int
+}
+
+//
+// Front 前端配置
+type Front struct {
+
+	// Theme 主题
+	Theme string
+
+	// Favicon  网站图标路径
+	Favicon string
+
+	// Template 模板信息
+	Template Template
+}
+
+//
+// Template 模板相关信息
+type Template struct {
+
+	// Path 路径
+	Path string
+
+	// Extension 模板文件扩展名
+	Extension string
 }

@@ -10,3 +10,8 @@ database:
   timeout: 10s
   maxOpen: 24
   maxIdle: 12
+#
+front:
+  theme: pure
+  template:
+    path: ./resources/template

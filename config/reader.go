@@ -39,3 +39,45 @@ func Port() int {
 func GetDbConfig() Database {
 	return Config.Database
 }
+
+//
+// TemplateDir 模板路径
+func TemplateDir() string {
+	if (Front{}) == Config.Front || (Template{}) == Config.Front.Template || "" == Config.Front.Template.Path {
+		return "./web/template"
+	}
+	return Config.Front.Template.Path
+}
+
+//
+// TemplateExtension 模板扩展名
+func TemplateExtension() string {
+	if (Front{}) == Config.Front || (Template{}) == Config.Front.Template || "" == Config.Front.Template.Extension {
+		return ".html"
+	}
+	return Config.Front.Template.Extension
+}
+
+//
+// ThemeStatic 静态文件路径
+func ThemeStatic() string {
+	if "" == Config.Front.Theme {
+		return TemplateDir() + "/static"
+	}
+	return TemplateDir() + "/" + Config.Front.Theme + "/static"
+}
+
+//
+// AdminStatic 管理后台静态文件目录
+func AdminStatic() string {
+	return TemplateDir() + "/admin/static"
+}
+
+//
+// Favicon 网站图标路径
+func Favicon() string {
+	if "" == Config.Front.Favicon {
+		return TemplateDir() + "/" + Config.Front.Theme + "/static/imgs/favicon.ico"
+	}
+	return TemplateDir() + "/static/imgs/favicon.ico"
+}

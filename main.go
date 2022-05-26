@@ -21,7 +21,7 @@ func main() {
 	mvc.Configure(app, routes.InitRouter)
 
 	// 配置html引擎
-	htmlEngine := iris.HTML("./web/template", ".html")
+	htmlEngine := iris.HTML(config.TemplateDir(), config.TemplateExtension())
 	app.RegisterView(htmlEngine)
 	// 开发模式相关设置
 	if config.IsDevMode() {
@@ -34,8 +34,9 @@ func main() {
 	}
 
 	// 静态文件处理
-	app.HandleDir("static", "./web/template/static")
-	app.Favicon("./web/template/static/imgs/favicon.ico")
+	app.HandleDir("static", config.ThemeStatic())
+	app.HandleDir("admin/static", config.AdminStatic())
+	app.Favicon(config.Favicon())
 
 	// 置于开发模式相关配置之后，不然开发模式NoCache不生效
 	app.Use(iris.StaticCache(24 * time.Hour))
