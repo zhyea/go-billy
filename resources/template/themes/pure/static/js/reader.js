@@ -75,7 +75,7 @@ let ReadSet = {
         document.write(output);
     },
 
-    SetCookies: function (cookieName, cookieValue, expirehours) {
+    SetCookies: function (cookieName, cookieValue) {
         let today = new Date();
         let expire = new Date();
         expire.setTime(today.getTime() + 3600000 * 356 * 24);

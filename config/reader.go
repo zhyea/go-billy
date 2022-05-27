@@ -44,7 +44,7 @@ func GetDbConfig() Database {
 // TemplateDir 模板路径
 func TemplateDir() string {
 	if (Front{}) == Config.Front || (Template{}) == Config.Front.Template || "" == Config.Front.Template.Path {
-		return "./web/template"
+		return "./resources/template"
 	}
 	return Config.Front.Template.Path
 }
@@ -64,7 +64,7 @@ func ThemeStatic() string {
 	if "" == Config.Front.Theme {
 		return TemplateDir() + "/static"
 	}
-	return TemplateDir() + "/" + Config.Front.Theme + "/static"
+	return TemplateDir() + "/themes/" + Config.Front.Theme + "/static"
 }
 
 //
@@ -74,10 +74,16 @@ func AdminStatic() string {
 }
 
 //
+// CommonStatic 通用静态文件路径
+func CommonStatic() string {
+	return TemplateDir() + "/static"
+}
+
+//
 // Favicon 网站图标路径
 func Favicon() string {
-	if "" == Config.Front.Favicon {
-		return TemplateDir() + "/" + Config.Front.Theme + "/static/imgs/favicon.ico"
+	if "" == Config.Front.Favicon && "" != Config.Front.Theme {
+		return TemplateDir() + "/themes/" + Config.Front.Theme + "/static/imgs/favicon.ico"
 	}
 	return TemplateDir() + "/static/imgs/favicon.ico"
 }

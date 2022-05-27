@@ -36,6 +36,7 @@ func main() {
 	// 静态文件处理
 	app.HandleDir("static", config.ThemeStatic())
 	app.HandleDir("admin/static", config.AdminStatic())
+	app.HandleDir("common/static", config.CommonStatic())
 	app.Favicon(config.Favicon())
 
 	// 置于开发模式相关配置之后，不然开发模式NoCache不生效
